@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(255,255,255,.45),rgba(255,255,255,.45)),
+    url("purple.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.container{
+
+    width:360px;
+    padding:35px;
+
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(8px);
+
+    border:2px solid white;
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+.container:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0px 12px 30px rgba(0,0,0,0.3);
+
+}
+
+/* Login Form Heading */
+
+h2{
+
+    text-align:center;
+    margin-bottom:25px;
+    color:#333;
+
+    cursor:pointer;
+    transition:.4s;
+
+}
+
+h2:hover{
+
+    color:#ff1493;
+    letter-spacing:2px;
+    transform:scale(1.08);
+
+}
+
+/* Input */
+
+input{
+
+    width:100%;
+    padding:12px;
+    margin:12px 0;
+
+    border:1px solid #ccc;
+    border-radius:8px;
+
+    outline:none;
+
+    background:white;
+
+    transition:.3s;
+
+}
+
+/* Click pannumbothu */
+
+input:focus{
+
+    background:#ffe4ef;
+    border:2px solid hotpink;
+    box-shadow:0 0 10px rgba(255,105,180,.4);
+
+}
+
+/* Click vittathum */
+
+input:not(:focus){
+
+    background:white;
+
+}
+
+/* Placeholder */
+
+input::placeholder{
+
+    color:#777;
+    filter:blur(.7px);
+    transition:.3s;
+
+}
+
+input:focus::placeholder{
+
+    filter:blur;
+   
+
+}
+
+/* Button */
+
+button{
+
+    width:100%;
+    padding:12px;
+    margin-top:18px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#ff69b4;
+    color:white;
+
+    font-size:16px;
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#ff1493;
+    transform:scale(1.03);
+
+}
+
+/* Message */
+
+#message{
+
+    text-align:center;
+    margin-top:18px;
+    font-weight:bold;
+
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Login Form</h2>
+<input type="text" id="username" placeholder="Enter Username">
+<input type="password" id="password" placeholder="Enter Password">
+<button onclick="login()">Login</button>
+<p id="message"></p>
+</div>
+<script src="login.js"></script>
+</body>
+</html>
